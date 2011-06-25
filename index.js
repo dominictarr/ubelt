@@ -1,5 +1,5 @@
 var arrays = require('./arrays')
   , objects = require('./objects')
-  
-;[arrays,objects].reduce(objects.merge,exports)
+  , types = require('./types')
 
+;[arrays,objects,types].reduce(objects.merge,exports)
