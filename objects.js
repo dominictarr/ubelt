@@ -18,7 +18,16 @@ var merge = exports.merge = function (obj1,obj2){
   return obj1
 }
 
+var RX = /sadf/.constructor
+function rx (iterator ){
+  return iterator instanceof RX ? function (str) { 
+      var m = iterator(str)
+      return m && (m[1] ? m[1] : m[0]) 
+    } : iterator
+}
+
 var map = exports.map = function (obj,iterator){
+  iterator = rx (iterator)
   if(Array.isArray(obj))
     return obj.map(iterator)
   
@@ -26,6 +35,35 @@ var map = exports.map = function (obj,iterator){
     , r = {}
   keys.forEach(function (key){
     r[key] = iterator(obj[key],key,obj) 
+  })
+  return r
+}
+
+//this will make instanceof work in the repl
+
+var filter = exports.filter = function (obj, iterator){
+  iterator = rx (iterator)
+  if(Array.isArray(obj))
+    return obj.filter(iterator)
+  
+
+  if(Array.isArray(obj))
+    return obj.filter(iterator)
+  
+  var keys = Object.keys(obj)
+    , r = {}
+  keys.forEach(function (key){
+    var v = iterator(obj[key],key,obj)
+    if(v)
+      r[key] = v
+  })
+  return r 
+}
+
+var mapKeys = exports.mapKeys = function (ary, iterator){
+  var r = {}
+  each(ary, function (v,k){
+    r[v] = iterator(v,k)
   })
   return r
 }
