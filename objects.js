@@ -67,3 +67,13 @@ var mapKeys = exports.mapKeys = function (ary, iterator){
   })
   return r
 }
+
+
+var mapToArray = exports.mapToArray = function (ary, iterator){
+  var r = []
+  each(ary, function (v,k){
+    r.push(iterator(v,k))
+  })
+  return r
+}
+
