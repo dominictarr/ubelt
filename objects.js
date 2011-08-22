@@ -21,14 +21,14 @@ var merge = exports.merge = function (obj1,obj2){
 var RX = /sadf/.constructor
 function rx (iterator ){
   return iterator instanceof RX ? function (str) { 
-      var m = iterator(str)
+      var m = iterator.exec(str)
       return m && (m[1] ? m[1] : m[0]) 
     } : iterator
 }
 
 var times = exports.times = function () {
   var args = [].slice.call(arguments)
-    , iterator = args.pop()
+    , iterator = rx(args.pop())
     , m = args.pop()
     , i = args.shift()
     , j = args.shift()
@@ -45,7 +45,7 @@ var times = exports.times = function () {
 }
 
 var map = exports.map = function (obj, iterator){
-
+  iterator = rx(iterator)
   if(Array.isArray(obj))
     return obj.map(iterator)
   if('number' === typeof obj)
@@ -65,7 +65,6 @@ var filter = exports.filter = function (obj, iterator){
   iterator = rx (iterator)
   if(Array.isArray(obj))
     return obj.filter(iterator)
-  
 
   if(Array.isArray(obj))
     return obj.filter(iterator)
@@ -82,6 +81,7 @@ var filter = exports.filter = function (obj, iterator){
 
 var mapKeys = exports.mapKeys = function (ary, iterator){
   var r = {}
+  iterator = rx(iterator)
   each(ary, function (v,k){
     r[v] = iterator(v,k)
   })
@@ -91,6 +91,7 @@ var mapKeys = exports.mapKeys = function (ary, iterator){
 
 var mapToArray = exports.mapToArray = function (ary, iterator){
   var r = []
+  iterator = rx(iterator)
   each(ary, function (v,k){
     r.push(iterator(v,k))
   })
