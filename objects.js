@@ -26,11 +26,31 @@ function rx (iterator ){
     } : iterator
 }
 
-var map = exports.map = function (obj,iterator){
-  iterator = rx (iterator)
+var times = exports.times = function () {
+  var args = [].slice.call(arguments)
+    , iterator = args.pop()
+    , m = args.pop()
+    , i = args.shift()
+    , j = args.shift()
+    , diff, dir
+    , a = []
+    
+    i = 'number' === typeof i ? i : 1
+    diff = j ? j - i : 1
+    dir = i < m
+
+  for (; dir ? i <= m : m <= i; i += diff)
+    a.push(iterator(i))
+  return a
+}
+
+var map = exports.map = function (obj, iterator){
+
   if(Array.isArray(obj))
     return obj.map(iterator)
-  
+  if('number' === typeof obj)
+    return times.apply(null, [].slice.call(arguments))  
+  //return if null ?  
   var keys = Object.keys(obj)
     , r = {}
   keys.forEach(function (key){
