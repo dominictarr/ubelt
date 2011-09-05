@@ -42,3 +42,51 @@ function compose () {
   })
   return compose.apply(null, funx)
 }
+
+exports.fallthrough = fallthrough
+
+function fallthrough () {
+  var args = [].slice.call(arguments)
+    , callback = args.pop()
+  callback.apply(this, args)
+}
+
+exports.tryCatchPass = tryCatchPass
+
+function tryCatchPass (_try,_catch,_pass) {
+  //make _try safe
+  return compose(safe(_try), function () {
+    var args = [].slice.call(arguments)
+      , next = args.pop()
+      , err  = args.shift()
+    if(err && _catch)
+      safe(_catch).call(this, err, next)
+    else if (!err && _pass)
+      safe(_pass).apply(null, args.concat(next))
+    else
+      next.apply(this, [err].concat(args))
+  })
+
+}
+
+exports.safe = safe
+
+function safe (funx) {
+  return function () {
+    var _callback = arguments[arguments.length - 1]
+      , n = 0
+      , callback = 
+    arguments[arguments.length - 1] = function () {
+      var args = [].slice.call(arguments)
+      if(!n++)
+        _callback.apply(this,args)
+      else
+        console.log('callback function ' + _callback.name + ' called:' + n + ' times')
+    }
+    try {
+      funx.apply(null, arguments)
+    } catch (err) {
+      callback(err)
+    }
+  }
+}
