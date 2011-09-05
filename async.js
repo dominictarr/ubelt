@@ -90,3 +90,19 @@ function safe (funx) {
     }
   }
 }
+
+exports.toAsync = toAsync
+
+function toAsync (func, a, b) {
+  return function () {
+    var args = [].slice.call(arguments)
+      , callback = args.pop()
+      , r
+    try {
+      r = func.apply(this, args)
+    } catch (err) {
+      return callback (err)
+    }
+    callback (null, r)  
+  }
+}
