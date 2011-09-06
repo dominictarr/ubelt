@@ -48,6 +48,7 @@ exports.fallthrough = fallthrough
 function fallthrough () {
   var args = [].slice.call(arguments)
     , callback = args.pop()
+  args.unshift(null)
   callback.apply(this, args)
 }
 
