@@ -4,4 +4,4 @@ var arrays = require('./arrays')
   , funx = require('./functions')
   , async = require('./async')
 
-;[arrays, objects, types, funx, async].reduce(objects.merge, exports)
+objects.merge(exports, arrays, objects, types, funx, async)
