@@ -107,3 +107,22 @@ function toAsync (func, a, b) {
     callback (null, r)  
   }
 }
+
+exports.timeout = function (func, time) {
+  var err = new Error('timeout! function:' + (func.name || func.toString().slice(0,100)) + ' did not callback within ' + time)
+  return function () {
+    var args = [].slice.call(arguments)
+      , callback = args.pop()
+      , called = 0
+      , timer = setTimeout(function () {
+                  checker(err)
+                }, time)
+    function checker () {
+      if(! called ++)
+        callback.apply(null, [].slice.call(arguments))
+      clearTimeout(timer)
+    }
+    args.push(checker)
+    return func.apply(this, args)
+  }
+}
