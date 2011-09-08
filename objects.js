@@ -10,11 +10,16 @@ var each = exports.each = function (obj,iterator){
  })
 }
 
-var merge = exports.merge = function (obj1,obj2){
-  var keys = Object.keys(obj2)
-  each(obj2, function (v,k){
-    obj1[k] = v  
-  })
+var merge = exports.merge = function (){
+  var args = [].slice.call(arguments)
+  var obj1 = args.shift()
+  while(args.length) {
+    var obj2 = args.shift()
+    var keys = Object.keys(obj2)
+    each(obj2, function (v,k){
+      obj1[k] = v  
+    })
+  }
   return obj1
 }
 
@@ -97,4 +102,3 @@ var mapToArray = exports.mapToArray = function (ary, iterator){
   })
   return r
 }
-
