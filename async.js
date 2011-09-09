@@ -83,7 +83,7 @@ function safe (funx) {
       if(!n++)
         _callback.apply(this,args)
       else
-        console.err(err.stack)
+        console.error(err.stack)
         //console.log('callback function ' + _callback.name + ' called:' + n + ' times')
     }
     try {
