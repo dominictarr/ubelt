@@ -73,6 +73,7 @@ function tryCatchPass (_try,_catch,_pass) {
 exports.safe = safe
 
 function safe (funx) {
+  var err = new Error((funx.name || funx.toString().slice(0,100) + '...') + ' called more than once')
   return function () {
     var _callback = arguments[arguments.length - 1]
       , n = 0
@@ -82,7 +83,8 @@ function safe (funx) {
       if(!n++)
         _callback.apply(this,args)
       else
-        console.log('callback function ' + _callback.name + ' called:' + n + ' times')
+        console.err(err.stack)
+        //console.log('callback function ' + _callback.name + ' called:' + n + ' times')
     }
     try {
       funx.apply(null, arguments)
@@ -118,9 +120,9 @@ exports.timeout = function (func, time) {
                   checker(err)
                 }, time)
     function checker () {
+      clearTimeout(timer)
       if(! called ++)
         callback.apply(null, [].slice.call(arguments))
-      clearTimeout(timer)
     }
     args.push(checker)
     return func.apply(this, args)
