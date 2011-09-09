@@ -45,7 +45,7 @@ exports.curry = function (/*funx, args...*/) {
   return function (){
     var _args = [].slice.call(arguments)
     return funx.apply(this, objects.map(args, function (i) {
-      return 'number' == typeof i ? _args[i < 0 ? _args.length + i : i] : i
+      return 'number' !== typeof i ? i : _args[i < 0 ? _args.length + i : i]
     }))
   }
 }

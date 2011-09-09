@@ -1,0 +1,283 @@
+info it worked if it ends with ok
+verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+info using npm@1.0.27
+info using node@v0.4.10
+verbose config file /home/dominic/.npmrc
+verbose config file /usr/local/etc/npmrc
+verbose publish [ '.' ]
+silly testEngine { name: 'd-utils',
+silly testEngine   version: '2.3.0',
+silly testEngine   description: 'Dominic\'s Utilities',
+silly testEngine   homepage: 'http://github.com/dominictarr/d-utils',
+silly testEngine   repository: 
+silly testEngine    { type: 'git',
+silly testEngine      url: 'git://github.com/dominictarr/d-utils.git' },
+silly testEngine   author: 
+silly testEngine    { name: 'Dominic Tarr',
+silly testEngine      email: 'dominic.tarr@gmail.com',
+silly testEngine      url: 'http://bit.ly/dominictarr' },
+silly testEngine   _npmJsonOpts: 
+silly testEngine    { file: '/home/dominic/source/dev/d-utils/package.json',
+silly testEngine      wscript: false,
+silly testEngine      contributors: false,
+silly testEngine      serverjs: false },
+silly testEngine   _id: 'd-utils@2.3.0',
+silly testEngine   dependencies: {},
+silly testEngine   devDependencies: {},
+silly testEngine   engines: { node: '*' },
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.27',
+silly testEngine   _nodeVersion: 'v0.4.10',
+silly testEngine   _defaultsLoaded: true,
+silly testEngine   scripts: {} }
+verbose caching /home/dominic/source/dev/d-utils/package.json
+verbose loadDefaults d-utils@2.3.0
+info prepublish d-utils@2.3.0
+verbose cache add [ '.', null ]
+silly cache add: name, spec, args [ undefined, '.', [ '.', null ] ]
+verbose parsed url { pathname: '.', href: '.' }
+silly testEngine { name: 'd-utils',
+silly testEngine   version: '2.3.0',
+silly testEngine   description: 'Dominic\'s Utilities',
+silly testEngine   homepage: 'http://github.com/dominictarr/d-utils',
+silly testEngine   repository: 
+silly testEngine    { type: 'git',
+silly testEngine      url: 'git://github.com/dominictarr/d-utils.git' },
+silly testEngine   author: 
+silly testEngine    { name: 'Dominic Tarr',
+silly testEngine      email: 'dominic.tarr@gmail.com',
+silly testEngine      url: 'http://bit.ly/dominictarr' },
+silly testEngine   _npmJsonOpts: 
+silly testEngine    { file: 'package.json',
+silly testEngine      wscript: false,
+silly testEngine      contributors: false,
+silly testEngine      serverjs: false },
+silly testEngine   _id: 'd-utils@2.3.0',
+silly testEngine   dependencies: {},
+silly testEngine   devDependencies: {},
+silly testEngine   engines: { node: '*' },
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.27',
+silly testEngine   _nodeVersion: 'v0.4.10',
+silly testEngine   _defaultsLoaded: true,
+silly testEngine   path: '/home/dominic/source/dev/d-utils' }
+verbose caching package.json
+verbose loadDefaults d-utils@2.3.0
+verbose pack /home/dominic/source/dev/d-utils /tmp/npm-1315550863448/1315550863448-0.8528999465052038/tmp.tgz
+verbose mkdir (expected) error ENOENT, No such file or directory '/tmp/npm-1315550863448'
+verbose mkdir (expected) error ENOENT, No such file or directory '/tmp/npm-1315550863448/1315550863448-0.8528999465052038'
+verbose mkdir done: /tmp/npm-1315550863448/1315550863448-0.8528999465052038 755
+verbose mkdir'ed /tmp/npm-1315550863448/1315550863448-0.8528999465052038
+verbose tar about to write tar and gzip it.
+silly tar args [ '-cvf',
+silly tar args   '-',
+silly tar args   'd-utils/objects.js',
+silly tar args   'd-utils/index.js',
+silly tar args   'd-utils/package.json',
+silly tar args   'd-utils/functions.js',
+silly tar args   'd-utils/types.js',
+silly tar args   'd-utils/readme.markdown',
+silly tar args   'd-utils/async.js',
+silly tar args   'd-utils/.gitignore',
+silly tar args   'd-utils/arrays.js' ]
+verbose success tar -cvf - <file list elided>
+verbose success gzip "--stdout"
+verbose mkdir (expected) error ENOENT, No such file or directory '/tmp/npm-1315550863448/1315550863448-0.8528999465052038/contents'
+verbose mkdir (expected) error ENOENT, No such file or directory '/tmp/npm-1315550863448/1315550863448-0.8528999465052038/contents/___package.npm'
+verbose mkdir done: /tmp/npm-1315550863448/1315550863448-0.8528999465052038/contents/___package.npm 755
+verbose unpack_ uid, gid [ undefined, undefined ]
+verbose unpackTarget /tmp/npm-1315550863448/1315550863448-0.8528999465052038/contents/package
+silly gunzTarPerm modes [ '755', '644' ]
+verbose success gzip "--decompress" "--stdout" "/tmp/npm-1315550863448/1315550863448-0.8528999465052038/tmp.tgz"
+verbose success tar "-mvxpf" "-" "-o" "-C" "/tmp/npm-1315550863448/1315550863448-0.8528999465052038/contents/___package.npm"
+silly asyncMap in gTP /tmp/npm-1315550863448/1315550863448-0.8528999465052038/contents/___package.npm/d-utils/
+silly asyncMap in gTP /tmp/npm-1315550863448/1315550863448-0.8528999465052038/contents/___package.npm/d-utils/objects.js
+silly asyncMap in gTP /tmp/npm-1315550863448/1315550863448-0.8528999465052038/contents/___package.npm/d-utils/index.js
+silly asyncMap in gTP /tmp/npm-1315550863448/1315550863448-0.8528999465052038/contents/___package.npm/d-utils/package.json
+silly asyncMap in gTP /tmp/npm-1315550863448/1315550863448-0.8528999465052038/contents/___package.npm/d-utils/functions.js
+silly asyncMap in gTP /tmp/npm-1315550863448/1315550863448-0.8528999465052038/contents/___package.npm/d-utils/types.js
+silly asyncMap in gTP /tmp/npm-1315550863448/1315550863448-0.8528999465052038/contents/___package.npm/d-utils/readme.markdown
+silly asyncMap in gTP /tmp/npm-1315550863448/1315550863448-0.8528999465052038/contents/___package.npm/d-utils/async.js
+silly asyncMap in gTP /tmp/npm-1315550863448/1315550863448-0.8528999465052038/contents/___package.npm/d-utils/.gitignore
+silly asyncMap in gTP /tmp/npm-1315550863448/1315550863448-0.8528999465052038/contents/___package.npm/d-utils/arrays.js
+verbose gunzed /tmp/npm-1315550863448/1315550863448-0.8528999465052038/contents/___package.npm/d-utils
+verbose rm'ed /tmp/npm-1315550863448/1315550863448-0.8528999465052038/contents/package
+verbose renamed [ '/tmp/npm-1315550863448/1315550863448-0.8528999465052038/contents/___package.npm/d-utils',
+verbose renamed   '/tmp/npm-1315550863448/1315550863448-0.8528999465052038/contents/package' ]
+silly testEngine { name: 'd-utils',
+silly testEngine   version: '2.3.0',
+silly testEngine   description: 'Dominic\'s Utilities',
+silly testEngine   homepage: 'http://github.com/dominictarr/d-utils',
+silly testEngine   repository: 
+silly testEngine    { type: 'git',
+silly testEngine      url: 'git://github.com/dominictarr/d-utils.git' },
+silly testEngine   author: 
+silly testEngine    { name: 'Dominic Tarr',
+silly testEngine      email: 'dominic.tarr@gmail.com',
+silly testEngine      url: 'http://bit.ly/dominictarr' },
+silly testEngine   _npmJsonOpts: 
+silly testEngine    { file: '/tmp/npm-1315550863448/1315550863448-0.8528999465052038/contents/package/package.json',
+silly testEngine      wscript: false,
+silly testEngine      contributors: false,
+silly testEngine      serverjs: false },
+silly testEngine   _id: 'd-utils@2.3.0',
+silly testEngine   dependencies: {},
+silly testEngine   devDependencies: {},
+silly testEngine   engines: { node: '*' },
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.27',
+silly testEngine   _nodeVersion: 'v0.4.10',
+silly testEngine   _defaultsLoaded: true,
+silly testEngine   path: '/tmp/npm-1315550863448/1315550863448-0.8528999465052038/contents/package' }
+verbose caching /tmp/npm-1315550863448/1315550863448-0.8528999465052038/contents/package/package.json
+verbose loadDefaults d-utils@2.3.0
+verbose tarball contents [ 'package' ]
+verbose from cache /tmp/npm-1315550863448/1315550863448-0.8528999465052038/contents/package/package.json
+verbose pack /tmp/npm-1315550863448/1315550863448-0.8528999465052038/contents/package /home/dominic/.npm/d-utils/2.3.0/package.tgz
+verbose mkdir'ed /home/dominic/.npm/d-utils/2.3.0
+verbose tar about to write tar and gzip it.
+silly tar args [ '-cvf',
+silly tar args   '-',
+silly tar args   'package/objects.js',
+silly tar args   'package/index.js',
+silly tar args   'package/package.json',
+silly tar args   'package/functions.js',
+silly tar args   'package/types.js',
+silly tar args   'package/readme.markdown',
+silly tar args   'package/async.js',
+silly tar args   'package/.gitignore',
+silly tar args   'package/arrays.js' ]
+verbose success tar -cvf - <file list elided>
+verbose success gzip "--stdout"
+verbose mkdir (expected) error ENOENT, No such file or directory '/home/dominic/.npm/d-utils/2.3.0/___package.npm'
+verbose mkdir done: /home/dominic/.npm/d-utils/2.3.0/___package.npm 755
+verbose unpack_ uid, gid [ undefined, undefined ]
+verbose unpackTarget /home/dominic/.npm/d-utils/2.3.0/package
+silly gunzTarPerm modes [ '755', '644' ]
+verbose success gzip "--decompress" "--stdout" "/home/dominic/.npm/d-utils/2.3.0/package.tgz"
+verbose success tar "-mvxpf" "-" "-o" "-C" "/home/dominic/.npm/d-utils/2.3.0/___package.npm"
+silly asyncMap in gTP /home/dominic/.npm/d-utils/2.3.0/___package.npm/package/
+silly asyncMap in gTP /home/dominic/.npm/d-utils/2.3.0/___package.npm/package/objects.js
+silly asyncMap in gTP /home/dominic/.npm/d-utils/2.3.0/___package.npm/package/index.js
+silly asyncMap in gTP /home/dominic/.npm/d-utils/2.3.0/___package.npm/package/package.json
+silly asyncMap in gTP /home/dominic/.npm/d-utils/2.3.0/___package.npm/package/functions.js
+silly asyncMap in gTP /home/dominic/.npm/d-utils/2.3.0/___package.npm/package/types.js
+silly asyncMap in gTP /home/dominic/.npm/d-utils/2.3.0/___package.npm/package/readme.markdown
+silly asyncMap in gTP /home/dominic/.npm/d-utils/2.3.0/___package.npm/package/async.js
+silly asyncMap in gTP /home/dominic/.npm/d-utils/2.3.0/___package.npm/package/.gitignore
+silly asyncMap in gTP /home/dominic/.npm/d-utils/2.3.0/___package.npm/package/arrays.js
+verbose gunzed /home/dominic/.npm/d-utils/2.3.0/___package.npm/package
+verbose rm'ed /home/dominic/.npm/d-utils/2.3.0/package
+verbose renamed [ '/home/dominic/.npm/d-utils/2.3.0/___package.npm/package',
+verbose renamed   '/home/dominic/.npm/d-utils/2.3.0/package' ]
+silly testEngine { name: 'd-utils',
+silly testEngine   version: '2.3.0',
+silly testEngine   description: 'Dominic\'s Utilities',
+silly testEngine   homepage: 'http://github.com/dominictarr/d-utils',
+silly testEngine   repository: 
+silly testEngine    { type: 'git',
+silly testEngine      url: 'git://github.com/dominictarr/d-utils.git' },
+silly testEngine   author: 
+silly testEngine    { name: 'Dominic Tarr',
+silly testEngine      email: 'dominic.tarr@gmail.com',
+silly testEngine      url: 'http://bit.ly/dominictarr' },
+silly testEngine   _npmJsonOpts: 
+silly testEngine    { file: '/home/dominic/.npm/d-utils/2.3.0/package/package.json',
+silly testEngine      wscript: false,
+silly testEngine      contributors: false,
+silly testEngine      serverjs: false },
+silly testEngine   _id: 'd-utils@2.3.0',
+silly testEngine   dependencies: {},
+silly testEngine   devDependencies: {},
+silly testEngine   engines: { node: '*' },
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.27',
+silly testEngine   _nodeVersion: 'v0.4.10',
+silly testEngine   _defaultsLoaded: true,
+silly testEngine   dist: 
+silly testEngine    { shasum: 'b228ce78265d133a698cc4bf1d09eeff2ff18375',
+silly testEngine      tarball: 'http://registry.npmjs.org/d-utils/-/d-utils-2.3.0.tgz' } }
+verbose caching /home/dominic/.npm/d-utils/2.3.0/package/package.json
+verbose loadDefaults d-utils@2.3.0
+silly updated sha bytes 3443
+info shasum b228ce78265d133a698cc4bf1d09eeff2ff18375
+info shasum /home/dominic/.npm/d-utils/2.3.0/package.tgz
+verbose from cache /home/dominic/.npm/d-utils/2.3.0/package/package.json
+verbose chmod /home/dominic/.npm/d-utils/2.3.0/package.tgz 644
+silly publish { name: 'd-utils',
+silly publish   version: '2.3.0',
+silly publish   description: 'Dominic\'s Utilities',
+silly publish   homepage: 'http://github.com/dominictarr/d-utils',
+silly publish   repository: 
+silly publish    { type: 'git',
+silly publish      url: 'git://github.com/dominictarr/d-utils.git' },
+silly publish   author: 
+silly publish    { name: 'Dominic Tarr',
+silly publish      email: 'dominic.tarr@gmail.com',
+silly publish      url: 'http://bit.ly/dominictarr' },
+silly publish   _npmJsonOpts: 
+silly publish    { file: '/home/dominic/.npm/d-utils/2.3.0/package/package.json',
+silly publish      wscript: false,
+silly publish      contributors: false,
+silly publish      serverjs: false },
+silly publish   _id: 'd-utils@2.3.0',
+silly publish   dependencies: {},
+silly publish   devDependencies: {},
+silly publish   engines: { node: '*' },
+silly publish   _engineSupported: true,
+silly publish   _npmVersion: '1.0.27',
+silly publish   _nodeVersion: 'v0.4.10',
+silly publish   _defaultsLoaded: true,
+silly publish   dist: 
+silly publish    { shasum: 'b228ce78265d133a698cc4bf1d09eeff2ff18375',
+silly publish      tarball: 'http://registry.npmjs.org/d-utils/-/d-utils-2.3.0.tgz' } }
+verbose PUT d-utils
+verbose raw, before any munging d-utils
+verbose url resolving [ 'https://registry.npmjs.org/', './d-utils' ]
+verbose url resolved https://registry.npmjs.org/d-utils
+verbose url parsed { protocol: 'https:',
+verbose url parsed   slashes: true,
+verbose url parsed   host: 'registry.npmjs.org',
+verbose url parsed   hostname: 'registry.npmjs.org',
+verbose url parsed   href: 'https://registry.npmjs.org/d-utils',
+verbose url parsed   pathname: '/d-utils' }
+silly writing json { _id: 'd-utils',
+silly writing json   name: 'd-utils',
+silly writing json   description: 'Dominic\'s Utilities',
+silly writing json   'dist-tags': {},
+silly writing json   versions: {},
+silly writing json   maintainers: 
+silly writing json    [ { name: 'dominictarr',
+silly writing json        email: 'dominic.tarr@gmail.com' } ] }
+verbose response https://registry.npmjs.org/d-utils
+silly chunk {"error":"conflict","reason":"Document update conflict."}
+silly chunk 
+verbose GET d-utils
+verbose raw, before any munging d-utils
+verbose url resolving [ 'https://registry.npmjs.org/', './d-utils' ]
+verbose url resolved https://registry.npmjs.org/d-utils
+verbose url parsed { protocol: 'https:',
+verbose url parsed   slashes: true,
+verbose url parsed   host: 'registry.npmjs.org',
+verbose url parsed   hostname: 'registry.npmjs.org',
+verbose url parsed   href: 'https://registry.npmjs.org/d-utils',
+verbose url parsed   pathname: '/d-utils' }
+verbose response https://registry.npmjs.org/d-utils
+silly chunk {"_id":"d-utils","_rev":"33-c4b446e5950a12e66a9e89a8ea7f2f42","name":"d-utils","description":"Dominic's Utilities","dist-tags":{"latest":"2.3.0"},"versions":{"0.0.0":{"name":"d-utils","version":"0.0.0","description":"Dominic's Utilities","homepage":"http://github.com/dominictarr/d-utils","repository":{"type":"git","url":"git://github.com/dominictarr/d-utils.git"},"dependencies":{},"devDependencies":{"it-is":"0.0.x"},"scripts":{"test":"meta-test test/*.js"},"author":{"name":"Dominic Tarr","email":"dominic.tarr@gmail.com","url":"http://bit.ly/dominictarr"},"_npmJsonOpts":{"file":"/home/dominic/.npm/d-utils/0.0.0/package/package.json","wscript":false,"contributors":false,"serverjs":false},"_id":"d-utils@0.0.0","engines":{"node":"*"},"_engineSupported":true,"_npmVersion":"1.0.13","_nodeVersion":"v0.4.8","_defaultsLoaded":true,"dist":{"shasum":"0b3474f9b9b1f88450dbbc3765983e49d4b883b6","tarball":"http://registry.npmjs.org/d-utils/-/d-utils-0.0.0.tgz"},"directories":{}},"0.0.1":{"name":"d-utils","version":"0.0.1","description":"Dominic's Utilities","homepage":"http://github.com/dominictarr/d-utils","repository":{"type":"git","url":"git://github.com/dominictarr/d-utils.git"},"dependencies":{},"devDependencies":{"it-is":"0.0.x"},"scripts":{"test
+silly chunk ":"meta-test test/*.js"},"author":{"name":"Dominic Tarr","email":"dominic.tarr@gmail.com","url":"http://bit.ly/dominictarr"},"_npmJsonOpts":{"file":"/home/dominic/.npm/d-utils/0.0.1/package/package.json","wscript":false,"contributors":false,"serverjs":false},"_id":"d-utils@0.0.1","engines":{"node":"*"},"_engineSupported":true,"_npmVersion":"1.0.13","_nodeVersion":"v0.4.8","_defaultsLoaded":true,"dist":{"shasum":"51d7681346cdf1d0ec236b04d7a854cc47771b7f","tarball":"http://registry.npmjs.org/d-utils/-/d-utils-0.0.1.tgz"},"directories":{}},"1.0.0":{"name":"d-utils","version":"1.0.0","description":"Dominic's Utilities","homepage":"http://github.com/dominictarr/d-utils","repository":{"type":"git","url":"git://github.com/dominictarr/d-utils.git"},"dependencies":{},"devDependencies":{"it-is":"0.0.x"},"scripts":{"test":"meta-test test/*.js"},"author":{"name":"Dominic Tarr","email":"dominic.tarr@gmail.com","url":"http://bit.ly/dominictarr"},"_npmJsonOpts":{"file":"/home/dominic/.npm/d-utils/1.0.0/package/package.json","wscript":false,"contributors":false,"serverjs":false},"_id":"d-utils@1.0.0","engines":{"node":"*"},"_engineSupported":true,"_npmVersion":"1.0.13","_nodeVersion":"v0.4.10","_defaultsLoaded":true,"dist":{"shasum":"de66188537b9f4037949ab583a1ff3775b6e2bb6","tarball":"http://registry.npmjs.org/d-utils/-/d-utils-1.0.0.tgz"},"maintainers":[{"name":"dominictarr","email":"dominic.tarr@gmail.com"}],"directories":{}},"1.1.0":{"name":"d-utils","version":"1.1.0","description":"Dominic's Utilities","homepage":"http://github.com/dominictarr/d-utils","repository":{"type":"git","url":"git://github.com/dominictarr/d-utils.git"},"dependencies":{},"devDependencies":{"it-is":"0.0.x"},"scripts":{"test":"meta-test test/*.js"},"author":{"name":"Dominic Tarr","email":"dominic.tarr@gmail.com","url":"http://bit.ly/dominictarr"},"_npmJsonOpts":{"file":"/home/dominic/.npm/d-utils/1.1.0/package/package.json","wscript":false,"contributors":false,"serverjs":false},"_id":"d-utils@1.1.0","engines":{"node":"*"},"_engineSupported":true,"_npmVersion":"1.0.13","_nodeVersion":"v0.4.10","_defaultsLoaded":true,"dist":{"shasum":"5c452324c2348fc0b29cbbe42c884b8ebf57a69a","tarball":"http://registry.npmjs.org/d-utils/-/d-utils-1.1.0.tgz"},"maintainers":[{"name":"dominictarr","email":"dominic.tarr@gmail.com"}],"directories":{}},"1.1.1":{"name":"d-utils","version":"1.1.1","description":"Dominic's Utilities","homepage":"http://github.com/dominictarr/d-utils","repository":{"type":"git","url":"git://github.com/dominictarr/d-utils.git"},"dependencies":{},"devDependencies":{"it-is":"0.0.x"},"scripts":{"test":"meta-test test/*.js"},"author":{"name":"Dominic Tarr","email":"dominic.tarr@gmail.com","url":"http://bit.ly/dominictarr"},"_npmJsonOpts":{"file":"/home/dominic/.npm/d-utils/1.1.1/package/package.json","wscript":false,"contributors":false,"serverjs":false},"_id":"d-utils@1.1.1","engines":{"node":"*"},"_engin
+silly chunk eSupported":true,"_npmVersion":"1.0.13","_nodeVersion":"v0.4.10","_defaultsLoaded":true,"dist":{"shasum":"a841015bb55b8b4f3a5d4ad1f3f992aa9f0bdae5","tarball":"http://registry.npmjs.org/d-utils/-/d-utils-1.1.1.tgz"},"maintainers":[{"name":"dominictarr","email":"dominic.tarr@gmail.com"}],"directories":{}},"1.1.2":{"name":"d-utils","version":"1.1.2","description":"Dominic's Utilities","homepage":"http://github.com/dominictarr/d-utils","repository":{"type":"git","url":"git://github.com/dominictarr/d-utils.git"},"dependencies":{},"devDependencies":{"it-is":"0.0.x"},"scripts":{"test":"meta-test test/*.js"},"author":{"name":"Dominic Tarr","email":"dominic.tarr@gmail.com","url":"http://bit.ly/dominictarr"},"_npmJsonOpts":{"file":"/home/dominic/.npm/d-utils/1.1.2/package/package.json","wscript":false,"contributors":false,"serverjs":false},"_id":"d-utils@1.1.2","engines":{"node":"*"},"_engineSupported":true,"_npmVersion":"1.0.13","_nodeVersion":"v0.4.10","_defaultsLoaded":true,"dist":{"shasum":"58acfe1057776028f9e9c318b1e2e8e2d9ca6d76","tarball":"http://registry.npmjs.org/d-utils/-/d-utils-1.1.2.tgz"},"maintainers":[{"name":"dominictarr","email":"dominic.tarr@gmail.com"}],"directories":{}},"1.2.0":{"name":"d-utils","version":"1.2.0","description":"Dominic's Utilities","homepage":"http://github.com/dominictarr/d-utils","repository":{"type":"git","url":"git://github.com/dominictarr/d-utils.git"},"dependencies":{},"devDependencies":{"it-is":"0.0.x"}
+silly chunk ,"scripts":{"test":"meta-test test/*.js"},"author":{"name":"Dominic Tarr","email":"dominic.tarr@gmail.com","url":"http://bit.ly/dominictarr"},"_npmJsonOpts":{"file":"/home/dominic/.npm/d-utils/1.2.0/package/package.json","wscript":false,"contributors":false,"serverjs":false},"_id":"d-utils@1.2.0","engines":{"node":"*"},"_engineSupported":true,"_npmVersion":"1.0.13","_nodeVersion":"v0.4.10","_defaultsLoaded":true,"dist":{"shasum":"77a48d485b7f7b20850cc8c5c706e9546912846f","tarball":"http://registry.npmjs.org/d-utils/-/d-utils-1.2.0.tgz"},"maintainers":[{"name":"dominictarr","email":"dominic.tarr@gmail.com"}],"directories":{}},"1.3.0":{"name":"d-utils","version":"1.3.0","description":"Dominic's Utilities","homepage":"http://github.com/dominictarr/d-utils","repository":{"type":"git","url":"git://github.com/dominictarr/d-utils.git"},"dependencies":{},"devDependencies":{"it-is":"0.0.x"},"scripts":{"test":"meta-test test/*.js"},"author":{"name":"Dominic Tarr","email":"dominic.tarr@gmail.com","url":"http://bit.ly/dominictarr"},"_npmJsonOpts":{"file":"/home/dominic/.npm/d-utils/1.3.0/package/package.json","wscript":false,"contributors":false,"serverjs":false},"_id":"d-utils@1.3.0","engines":{"node":"*"},"_engineSupported":true,"_npmVersion":"1.0.27","_nodeVersion":"v0.4.10","_defaultsLoaded":true,"dist":{"shasum":"6a28b274073d2c74d273af004be86634690fc0ea","tarball":"http://registry.npmjs.org/d-utils/-/d-utils-1.3.0.tgz"},"maintainers":[{"name":"dominictarr","email":"dominic.tarr@gmail.com"}],"directories":{}},"1.4.0":{"name":"d-utils","version":"1.4.0","description":"Dominic's Utilities","homepage":"http://github.com/dominictarr/d-utils","repository":{"type":"git","url":"git://github.com/dominictarr/d-utils.git"},"dependencies":{},"devDependencies":{"it-is":"0.0.x"},"scripts":{"test":"meta-test test/*.js"},"author":{"name":"Dominic Tarr","email":"dominic.tarr@gmail.com","url":"http://bit.ly/dominictarr"},"_npmJsonOpts":{"file":"/home/dominic/.npm/d-utils/1.4.0/package/package.json","wscript":false,"contributors":false,"serverjs":false},"_id":"d-utils@1.4.0","engines":{"node":"*"},"_engineSupported":true,"_npmVersion":"1.0.27","_nodeVersion":"v0.4.10","_defaultsLoaded":true,"dist":{"shasum":"4476d248676e5832c6d0fc69e2ed0d10c14c9ff7","tarball":"http://registry.npmjs.org/d-utils/-/d-utils-1.4.0.tgz"},"maintainers":[{"name":"dominictarr","email":"dominic.tarr@gmail.com"}],"directories":{}},"2.0.0":{"name":"d-utils","version":"2.0.0","description":"Dominic's Utilities","homepage":"http://github.com/dominictarr/d-utils","repository":{"type":"git","url":"git://github.com/dominictarr/d-utils.git"},"dependencies":{},"devDependencies":{"it-is":"0.0.x"},"scripts":{"test":"meta-test test/*.js"},"author":{"name":"Dominic Tarr","email":"dominic.tarr@gmail.com","url":"http://bit.ly/dominictarr"},"_npmJsonOpts":{"file":"/home/dominic/.npm/d-utils/2.0.0/package/package.json","wscript":false,"
+silly chunk contributors":false,"serverjs":false},"_id":"d-utils@2.0.0","engines":{"node":"*"},"_engineSupported":true,"_npmVersion":"1.0.27","_nodeVersion":"v0.4.10","_defaultsLoaded":true,"dist":{"shasum":"91b6ea7a5f519dee45f23caab653e9950024efc5","tarball":"http://registry.npmjs.org/d-utils/-/d-utils-2.0.0.tgz"},"maintainers":[{"name":"dominictarr","email":"dominic.tarr@gmail.com"}],"directories":{}},"2.1.0":{"name":"d-utils","version":"2.1.0","description":"Dominic's Utilities","homepage":"http://github.com/dominictarr/d-utils","repository":{"type":"git","url":"git://github.com/dominictarr/d-utils.git"},"dependencies":{},"devDependencies":{"it-is":"0.0.x"},"scripts":{"test":"meta-test test/*.js"},"author":{"name":"Dominic Tarr","email":"dominic.tarr@gmail.com","url":"http://bit.ly/dominictarr"},"_npmJsonOpts":{"file":"/home/dominic/.npm/d-utils/2.1.0/package/package.json","wscript":false,"contributors":false,"serverjs":false},"_id":"d-utils@2.1.0","engines":{"node":"*"},"_engineSupported":true,"_npmVersion":"1.0.27","_nodeVersion":"v0.4.10","_defaultsLoaded":true,"dist":{"shasum":"7b6fe312fec8bc80eabe840d8a2ffefe63e3fa9e","tarball":"http://registry.npmjs.org/d-utils/-/d-utils-2.1.0.tgz"},"maintainers":[{"name":"dominictarr","email":"dominic.tarr@gmail.com"}],"directories":{}},"2.1.1":{"name":"d-utils","version":"2.1.1","description":"Dominic's Utilities","homepage":"http://github.com/dominictarr/d-utils","repository":{"type":"git","url":"git://github.com/dominictarr/d-utils.git"},"author":{"name":"Dominic Tarr","email":"dominic.tarr@gmail.com","url":"http://bit.ly/dominictarr"},"_npmJsonOpts":{"file":"/home/dominic/.npm/d-utils/2.1.1/package/package.json","wscript":false,"contributors":false,"serverjs":false},"_id":"d-utils@2.1.1","dependencies":{},"devDependencies":{},"engines":{"node":"*"},"_engineSupported":true,"_npmVersion":"1.0.27","_nodeVersion":"v0.4.10","_defaultsLoaded":true,"dist":{"shasum":"359c6a002049516f042db9e49de302204e1fec3c","tarball":"http://registry.npmjs.org/d-utils/-/d-utils-2.1.1.tgz"},"maintainers":[{"name":"dominictarr","email":"dominic.tarr@gmail.com"}],"directories":{}},"2.2.0":{"name":"d-utils","version":"2.2.0","description":"Dominic's Utilities","homepage":"http://github.com/dominictarr/d-utils","repository":{"type":"git","url":"git://github.com/dominictarr/d-utils.git"},"author":{"name":"Dominic Tarr","email":"dominic.tarr@gmail.com","url":"http://bit.ly/dominictarr"},"_npmJsonOpts":{"file":"/home/dominic/.npm/d-utils/2.2.0/package/package.json","wscript":false,"contributors":false,"serverjs":false},"_id":"d-utils@2.2.0","dependencies":{},"devDependencies":{},"engines":{"node":"*"},"_engineSupported":true,"_npmVersion":"1.0.27","_nodeVersion":"v0.4.10","_defaultsLoaded":true,"dist":{"shasum":"e83dc45c2b1ba2e79d93fe38082a3d617d308ba5","tarball":"http://registry.npmjs.org/d-utils/-/d-utils-2.2.0.tgz"},"maintainers":[{"name":"dominictarr","email":"dominic.tarr@gmail.com"}],"directories":{}},"2.3.0":{"name":"d-utils","version":"2.3.0","description":"Dominic's Utilities","homepage":"http://github.com/dominictarr/d-utils","repository":{"type":"git","url":"git://github.com/dominictarr/d-utils.git"},"author":{"name":"Dominic Tarr","email":"dominic.tarr@gmail.com","url":"http://bit.ly/dominictarr"},"_npmJsonOpts":{"file":"/home/dominic/.npm/d-utils/2.3.0/package/package.json","wscript":false,"contributors":false,"serverjs":false},"_id":"d-utils@2.3.0","dependencies":{},"devDependencies":{},"engines":{"node":"*"},"_engineSupported":true,"_npmVersion":"1.0.27","_nodeVersion":"v0.4.10","_defaultsLoaded":true,"dist":{"shasum":"88c4000e6b51682a89917c2b9808e94ae90e4c27","tarball":"http://registry.npmjs.org/d-utils/-/d-utils-2.3.0.tgz"},"maintainers":[{"name":"dominictarr","email":"dominic.tarr@gmail.com"}],"directories":{}}},"maintainers":[{"name":"dominictarr","email":"dominic.tarr@gmail.com"}],"time":{"0.0.0":"2011-06-24T23:20:10.686Z","0.0.1":"2011-06-25T00:29:35.991Z","1.0.0":"2011-08-15T07:49:59.020Z","1.1.0":"2011-08-22T03:17:42.976Z","1.1.1":"2011-08-22T03:31:04.485Z","1.1.2":"2011-08-22T03:53:02.899Z","1.2.0":"2011-08-22T10:08:45.788Z","1.3.0":"2011-09-05T14:10:38.691Z","1.4.0":"2011-09-05T14:19:07.621Z","2.0.0":"2011-09-06T02:24:00.599Z","2.1.0":"2011-09-08T02:38:10.446Z","2.1.1":"2011-09-08T02:47:07.096Z","2.2.0":"2011-09-08T10:03:33.235Z","2.3.0":"2011-09-08T11:04:23.542Z"},"author":{"name":"Dominic Tarr","email":"dominic.tarr@gmail.com","url":"http://bit.ly/dominictarr"},"repository":{"type":"git","url":"git://github.com/dominictarr/d-utils.git"}}
+info Already published d-utils@2.3.0
+verbose uploading bin dists []
+ERR! publish fail Cannot publish over existing version.
+ERR! publish fail Bump the 'version' field, set the --force flag, or
+ERR! publish fail     npm unpublish 'd-utils@2.3.0'
+ERR! publish fail and try again
+ERR! 
+ERR! System Linux 2.6.35-30-generic-pae
+ERR! command "node" "/usr/local/bin/npm" "publish"
+ERR! cwd /home/dominic/source/dev/d-utils
+ERR! node -v v0.4.10
+ERR! npm -v 1.0.27
+verbose exit [ 1, true ]
