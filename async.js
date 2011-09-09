@@ -72,11 +72,18 @@ function tryCatchPass (_try,_catch,_pass) {
 
 exports.safe = safe
 
+function fName (funx) {
+  return '[' + (funx.name || funx.toString().slice(0,100) + '...') + ']'
+}
+
 function safe (funx) {
-  var err = new Error((funx.name || funx.toString().slice(0,100) + '...') + ' called more than once')
+  var err = new Error( fName(funx) + ' called more than once')
   return function () {
     var _callback = arguments[arguments.length - 1]
-      , n = 0
+    if('function' !== typeof _callback)
+      (function (){ throw new Error('expected ' + _callback + 'to be a function') })()
+
+    var n = 0
       , callback = 
     arguments[arguments.length - 1] = function () {
       var args = [].slice.call(arguments)
