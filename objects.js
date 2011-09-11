@@ -10,18 +10,35 @@ var each = exports.each = function (obj,iterator){
  })
 }
 
-var merge = exports.merge = function (){
+var merge = exports.merge = function (a, b) {
+  if(arguments.length <= 1)
+    return a
+  if(a == null)
+    return merge.apply(null, [].slice.call(arguments, 1))
+  if(b != null)
+    each(b, function (v,k){
+      a[k] = v
+    })
+  return merge.apply(null, [a].concat([].slice.call(arguments, 2)))  
+}
+
+/*var merge = exports.merge = function (){
   var args = [].slice.call(arguments)
-  var obj1 = args.shift()
+  var obj1 = null, obj2 = null
+  while (args.length && obj1 == null) //skip null and undefined
+    obj1 = args.shift()
   while(args.length) {
-    var obj2 = args.shift()
+    
+    obj2 = null    
+    while (args.length && obj1 == null) //skip null and undefined
+      obj2 = args.shift()
     var keys = Object.keys(obj2)
     each(obj2, function (v,k){
       obj1[k] = v  
     })
   }
   return obj1
-}
+}*/
 
 var RX = /sadf/.constructor
 function rx (iterator ){
