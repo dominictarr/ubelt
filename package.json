@@ -1,6 +1,6 @@
-{ "name": "d-utils"
+{ "name": "ubelt"
 , "version": "2.3.3"
-, "description": "Dominic's Utilities"
+, "description": "utility belt was (Dominic's Utilities)"
 , "homepage": "http://github.com/dominictarr/d-utils"
 , "repository": 
   { "type": "git"
