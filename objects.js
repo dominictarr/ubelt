@@ -163,9 +163,6 @@ patch = exports.patch = function (old, ptch) {
 deepMerge = exports.deepMerge = function (old, nw) {
   var ab = merge({}, nw,  old)
     , s = Array.isArray(nw) ? [] : {}
-  console.error('************')
-  console.error(nw,  '+', old, '==',  ab)
-  console.error('************')
   each(ab, function (ignore, k) { //on each key in ab, 
     
     s[k] = (nw[k] === undefined ? old[k] : nw[k])
@@ -174,8 +171,6 @@ deepMerge = exports.deepMerge = function (old, nw) {
     }
 
   })
-  console.error(s)
-  console.error('============')
  
   return s
 
