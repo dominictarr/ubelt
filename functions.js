@@ -57,6 +57,7 @@ exports.deepCurry = function () {
   
   return function () {
     var _args = [].slice.call(arguments)
-    return funx.apply(this, objects.merge([], args, _args))
+    console.error(args, _args)
+    return funx.apply(this, objects.deepMerge(args, _args))
   }
 }

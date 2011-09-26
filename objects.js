@@ -17,6 +17,7 @@ var merge = exports.merge = function (a, b) {
     return merge.apply(null, [].slice.call(arguments, 1))
   if(b != null)
     each(b, function (v,k){
+      console.error(b, v, k)
       a[k] = v
     })
   return merge.apply(null, [a].concat([].slice.call(arguments, 2)))  
@@ -127,7 +128,6 @@ diff = exports.diff = function (old, nw) {
      
   each(ab, function (ignore, k) {
 
-    console.log(typeof nw[k], typeof old[k], !!old[k])
     //if the property is not in the new object, it must have been deleted.
     if (nw[k] == null)       
       s[k]  = null //null on a diff means to delete that property.
@@ -163,15 +163,19 @@ patch = exports.patch = function (old, ptch) {
 deepMerge = exports.deepMerge = function (old, nw) {
   var ab = merge({}, nw,  old)
     , s = Array.isArray(nw) ? [] : {}
+  console.error('************')
+  console.error(nw,  '+', old, '==',  ab)
+  console.error('************')
+  each(ab, function (ignore, k) { //on each key in ab, 
     
-  each(ab, function (ignore, k) {
-    
-    s[k] = nw[k] === undefined ? old[k] : nw[k]
+    s[k] = (nw[k] === undefined ? old[k] : nw[k])
     if ('object' === typeof nw[k] && 'object' === typeof old[k] && old[k] && nw[k] && old[k]) {
         s[k] = deepMerge (old[k], nw[k])
     }
 
   })
+  console.error(s)
+  console.error('============')
  
   return s
 
