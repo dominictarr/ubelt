@@ -49,3 +49,14 @@ exports.curry = function (/*funx, args...*/) {
     }))
   }
 }
+
+
+exports.deepCurry = function () {
+  var args = [].slice.call(arguments)
+    , funx = args.shift()
+  
+  return function () {
+    var _args = [].slice.call(arguments)
+    return funx.apply(this, objects.merge([], args, _args))
+  }
+}

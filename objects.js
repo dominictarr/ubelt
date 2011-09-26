@@ -119,3 +119,60 @@ var mapToArray = exports.mapToArray = function (ary, iterator){
   })
   return r
 }
+
+
+diff = exports.diff = function (old, nw) {
+  var ab = deepMerge (nw,  old)
+    , s = {}
+     
+  each(ab, function (ignore, k) {
+
+    console.log(typeof nw[k], typeof old[k], !!old[k])
+    //if the property is not in the new object, it must have been deleted.
+    if (nw[k] == null)       
+      s[k]  = null //null on a diff means to delete that property.
+    else if ('object' === typeof nw[k] && 'object' === typeof old[k] && old[k]) 
+      s[k] = diff(old[k], nw[k])
+    else if (nw[k] !== old[k])   
+      s[k] = nw[k] === undefined ? null : nw[k]
+
+  })
+  return s
+  
+}
+
+patch = exports.patch = function (old, ptch) {
+  var nw = deepMerge({},  old)
+    
+  each(ptch, function (ignore, k) {
+
+    //if the property is not in the new object, it must have been deleted.
+    if (ptch[k] === null)        
+      delete nw[k]
+    else if ('object' === typeof ptch[k]) 
+      nw[k] = patch(old[k], ptch[k])
+    else 
+      nw[k] = ptch[k]
+
+  })
+
+  return nw
+  
+}
+
+deepMerge = exports.deepMerge = function (old, nw) {
+  var ab = merge({}, nw,  old)
+    , s = Array.isArray(nw) ? [] : {}
+    
+  each(ab, function (ignore, k) {
+    
+    s[k] = nw[k] === undefined ? old[k] : nw[k]
+    if ('object' === typeof nw[k] && 'object' === typeof old[k] && old[k] && nw[k] && old[k]) {
+        s[k] = deepMerge (old[k], nw[k])
+    }
+
+  })
+ 
+  return s
+
+}
