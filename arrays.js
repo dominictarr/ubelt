@@ -43,6 +43,17 @@ function head(array){
   return empty(array) ? null : array[0]
 }
 
+function flatten (nested) {
+  var a = []  
+  function denest (item) {
+    if(Array.isArray(item))
+      item.forEach(denest)
+    else a.push(item)
+  }
+  denest(nested)
+  return a
+}
+
 module.exports = {
   throwIfEmpty: throwIfEmpty,
   init: init,
@@ -53,5 +64,6 @@ module.exports = {
   strictTail: strictTail,
   strictLast: strictLast,
   strictHead: strictHead,
-  empty: empty
+  empty: empty,
+  flatten: flatten
 }
