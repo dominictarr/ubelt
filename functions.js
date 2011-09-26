@@ -61,3 +61,32 @@ exports.deepCurry = function () {
     return funx.apply(this, objects.deepMerge(args, _args))
   }
 }
+
+/*
+before: modify the args to a function before it is called.
+
+I think this is called aspect oriented programming.
+
+the 'before' function returns a function that calls a shim function before a given function,
+the 'shim' function is passed the args of the returned function, and may alter them before
+the given function is called.
+
+*/
+
+var fName = function (f) {
+  return '"' + (f.name || f.toString().slice(0,100)) + '"'
+
+}
+
+var before = exports.before = function (given, shim) {
+  return function wrapped () {
+    return given.apply(this, shim([].slice.call(arguments)))
+  }
+}
+
+var beforeCallback = 
+  exports.beforeCallback = function (async, shim) {
+  return before(async, function (args) {
+    args.push(before(args.pop(), shim)); return args
+  })
+}
