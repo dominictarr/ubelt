@@ -81,12 +81,35 @@ var map = exports.map = function (obj, iterator){
   return r
 }
 
-var reduce = exports.reduce = function (obj, iterator, initial) {
-
-  
+var findReturn = exports.findReturn = function (obj, iterator) {
+  iterator = rx(iterator)
+  if(obj == null)
+    return
+  var keys = Object.keys(obj)
+    , l = keys.length
+  for (var i = 0; i < l; i ++) {
+    var key = keys[i]
+      , value = obj[key]
+    var r = iterator(value, key)
+    if(r) return r
+  }
 }
 
-//this will make instanceof work in the repl
+var find = exports.find = function (obj, iterator) { 
+  iterator = rx(iterator)
+  return findReturn (obj, function (v, k) {
+    var r = iterator(v, k)
+    if(r) return v
+  })
+}
+
+var findKey = exports.findKey = function (obj, iterator) { 
+  iterator = rx(iterator)
+  return findReturn (obj, function (v, k) {
+    var r = iterator(v, k)
+    if(r) return k
+  })
+}
 
 var filter = exports.filter = function (obj, iterator){
   iterator = rx (iterator)
