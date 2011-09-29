@@ -17,7 +17,6 @@ var merge = exports.merge = function (a, b) {
     return merge.apply(null, [].slice.call(arguments, 1))
   if(b != null)
     each(b, function (v,k){
-      console.error(b, v, k)
       a[k] = v
     })
   return merge.apply(null, [a].concat([].slice.call(arguments, 2)))  
@@ -80,6 +79,11 @@ var map = exports.map = function (obj, iterator){
     r[key] = iterator(obj[key],key,obj) 
   })
   return r
+}
+
+var reduce = exports.reduce = function (obj, iterator, initial) {
+
+  
 }
 
 //this will make instanceof work in the repl

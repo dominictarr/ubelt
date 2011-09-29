@@ -57,7 +57,6 @@ exports.deepCurry = function () {
   
   return function () {
     var _args = [].slice.call(arguments)
-    console.error(args, _args)
     return funx.apply(this, objects.deepMerge(args, _args))
   }
 }
@@ -71,6 +70,25 @@ the 'before' function returns a function that calls a shim function before a giv
 the 'shim' function is passed the args of the returned function, and may alter them before
 the given function is called.
 
+hmm, thats about twice as much english than javascript.
+
+use it like this:
+
+function (x,p,z) {return whatever(z, p, x)}
+
+before(whatever, function (args) { return args.reverse() })
+
+hmm, thats more verbose than the straight forward way...
+maybe that function is not such a great idea.
+
+what about beforeCallback?
+
+function (opts, callback) { request (opts, function (err, res, body) { callback(err, body) } }
+
+beforeCallback(request, function (args) { return [args[0], args[2]] })
+
+ah, that is better.
+
 */
 
 var fName = function (f) {
@@ -83,10 +101,41 @@ var before = exports.before = function (given, shim) {
     return given.apply(this, shim([].slice.call(arguments)))
   }
 }
+//before(whatever, function (a) { return a.reverse() })
 
 var beforeCallback = 
   exports.beforeCallback = function (async, shim) {
   return before(async, function (args) {
     args.push(before(args.pop(), shim)); return args
   })
+}
+
+
+/*
+ prevent a function from being called intil some thing important has happened.
+ (useful for delaying something until a connection is made.)
+*/
+
+var defer =
+  exports.defer =  function (deferred) {
+  var buffer = []
+    , buffering = true
+
+  function deferrer () {
+    var args = [].slice.call(arguments)
+    if(buffering)
+      buffer.push(args)
+    else deferred.apply(null, args)
+  }
+  deferrer.flush = function () {
+    buffering = false
+    while(!buffering && buffer.length) {
+      deferred.apply(null, buffer.shift()) 
+    }
+  }
+  deferrer.buffer = function () {
+    buffering = true
+  }
+
+  return deferrer
 }
