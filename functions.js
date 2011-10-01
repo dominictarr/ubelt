@@ -114,6 +114,17 @@ var beforeCallback =
 /*
  prevent a function from being called intil some thing important has happened.
  (useful for delaying something until a connection is made.)
+
+  use like this:
+  
+  dbSave = defer(dbSave)
+  
+  bdSave(doc1) //these calls will be buffered
+  bdSave(doc2)
+  
+  db.connect()
+  db.on('connection', dbSave.flush)
+  db.on('disconnection', function () {dbSave.buffer(); db.reconnect() })
 */
 
 var defer =
