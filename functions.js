@@ -150,3 +150,63 @@ var defer =
 
   return deferrer
 }
+
+
+/*
+  curryHead(func, tail...)
+    -> function (head) { return func(head, tail...) }
+  given a function and tail args,
+  return a function that takes a head arg,
+  and applys head.concat(tail) to the given function
+
+*/
+
+var curryTail = 
+  exports.curryTail = function (func) {
+    var args = [].slice.call(arguments, 1)
+    if(!args.length) return func
+    return function (a) {
+       return func.apply(this, [a].concat(args))
+    }
+  }
+
+/*
+  curryHead(func, head)
+    -> function (tail...) { return func(head, tail...) }
+
+  given a function and head arg, 
+  return a function that takes tail args,
+  and calls the given function with head.concat(tail)
+*/
+
+var curryHead = 
+  exports.curryHead = function (func, a) {
+    return function () {
+      var args = [].slice.call(arguments)
+      return func.apply(this, [a].concat(args))
+    }
+  }
+
+/*
+  curryTailHead
+
+  take a given function and return a function that takes tail args, 
+  and returns a function that takes a head arg, 
+  and that calls the given function with head.concat(tail)
+  
+  you are certainly deep down the rabit hole when you are using functional composition on curry functions
+
+  this is actually gonna be useful for making spec assertions -- with higer order assertions.
+  
+  so that you can say
+  equal(x, X)
+
+  with:
+    
+  _equal(X)(x)
+  
+*/
+
+var curryTailHead = exports.curryTailHead = function (funx) {
+  return curryHead (curryTail, funx)
+}

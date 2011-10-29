@@ -200,5 +200,14 @@ deepMerge = exports.deepMerge = function (old, nw) {
   })
  
   return s
+}
 
+var path = exports.path = function (object, path) {
+
+  for (var i in path) {
+    if(object == null) return undefined
+    var key = path[i]
+    object = object[key]
+  }
+  return object
 }
