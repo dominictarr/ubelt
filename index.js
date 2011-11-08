@@ -3,5 +3,5 @@ var arrays = require('./arrays')
   , types = require('./types')
   , funx = require('./functions')
   , async = require('./async')
-
-objects.merge(exports, arrays, objects, types, funx, async)
+  , random = require('./random')
+objects.merge(exports, arrays, objects, types, funx, async, random)
