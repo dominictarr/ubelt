@@ -76,7 +76,7 @@ function union (a, b) {
     if(!~c.indexOf(item))
       c.push(item)
   }
-  a.forEach(add)
-  b.forEach(add)
+  if(a) a.forEach(add)
+  if(b) b.forEach(add)
   return c
 }
