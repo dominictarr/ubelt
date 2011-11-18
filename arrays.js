@@ -65,5 +65,18 @@ module.exports = {
   strictLast: strictLast,
   strictHead: strictHead,
   empty: empty,
-  flatten: flatten
+  flatten: flatten,
+  union: union
+}
+
+function union (a, b) {
+  
+  var c = []
+  function add (item) {
+    if(!~c.indexOf(item))
+      c.push(item)
+  }
+  a.forEach(add)
+  b.forEach(add)
+  return c
 }
