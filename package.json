@@ -1,5 +1,5 @@
 { "name": "ubelt"
-, "version": "2.13.1"
+, "version": "3.0.0"
 , "description": "utility belt was (Dominic's Utilities)"
 , "homepage": "http://github.com/dominictarr/d-utils"
 , "main": "./index.js"
