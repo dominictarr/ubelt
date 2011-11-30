@@ -113,8 +113,6 @@ var findKey = exports.findKey = function (obj, iterator) {
 
 var filter = exports.filter = function (obj, iterator){
   iterator = rx (iterator)
-  if(Array.isArray(obj))
-    return obj.filter(iterator)
 
   if(Array.isArray(obj))
     return obj.filter(iterator)
@@ -122,8 +120,8 @@ var filter = exports.filter = function (obj, iterator){
   var keys = Object.keys(obj)
     , r = {}
   keys.forEach(function (key){
-    var v = iterator(obj[key],key,obj)
-    if(v)
+    var v
+    if(iterator(v = obj[key],key,obj))
       r[key] = v
   })
   return r 
