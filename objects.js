@@ -196,9 +196,7 @@ deepMerge = exports.deepMerge = function (old, nw) {
     if ('object' === typeof nw[k] && 'object' === typeof old[k] && old[k] && nw[k] && old[k]) {
         s[k] = deepMerge (old[k], nw[k])
     }
-
   })
- 
   return s
 }
 
@@ -210,4 +208,32 @@ var path = exports.path = function (object, path) {
     object = object[key]
   }
   return object
+}
+
+var eachPath = exports.eachPath = function (object, opts, iterator) {
+  // function iterator (value, path)
+}
+
+/*
+NOTE: naive implementation. 
+`match` must not contain circular references.
+*/
+
+var has = exports.has = function (obj, match) {
+  if(obj == null && match != null)
+    return false
+
+  for (var key in match) {
+    //deep/complex checks
+    if('object' == typeof match[key]) {
+      if(!has(obj[key], match[key]))
+        return false
+    } else if ('function' == typeof match[key]) { 
+      if (!match[key](obj[key]))
+        return false
+    } else if(match[key] !== obj[key])
+      return false
+    //if match is a function, apply it to the corrisponding obj[key]
+  }
+  return true
 }
