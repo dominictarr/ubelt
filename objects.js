@@ -235,3 +235,14 @@ var has = exports.has = function (obj, match) {
   }
   return true
 }
+
+var setPath = exports.setPath = function (object, path, value) {
+
+  for (var i in path) {
+    var key = path[i]
+    if(object[key] == null) object[key] = ( 
+      i + 1 == path.length ? value : {}
+    )
+    object = object[key]
+  }
+}
