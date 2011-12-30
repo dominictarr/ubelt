@@ -1,0 +1,129 @@
+info it worked if it ends with ok
+verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+info using npm@1.1.0-alpha-6
+info using node@v0.6.5
+verbose /usr/local/bin/node node symlink
+verbose config file /home/dominic/.npmrc
+verbose config file /usr/local/etc/npmrc
+verbose config file /home/dominic/.nave/installed/0.6.5/lib/node_modules/npm/npmrc
+verbose publish [ '.' ]
+verbose caching /home/dominic/source/dev/ubelt/package.json
+verbose loadDefaults ubelt@3.1.0
+info prepublish ubelt@3.1.0
+verbose cache add [ '.', null ]
+silly cache add: name, spec, args [ undefined, '.', [ '.', null ] ]
+verbose parsed url { pathname: '.', path: '.', href: '.' }
+verbose caching package.json
+verbose loadDefaults ubelt@3.1.0
+verbose pack /home/dominic/source/dev/ubelt /tmp/npm-1324514729774/1324514729765-0.9136077547445893/tmp.tgz
+silly makeList /home/dominic/source/dev/ubelt
+silly dir, dirLen [ '/home/dominic/source/dev/ubelt', 31 ]
+verbose tarball /tmp/npm-1324514729774/1324514729765-0.9136077547445893/tmp.tgz
+verbose parent /home/dominic/source/dev/ubelt
+verbose mkdir (expected) error ENOENT, no such file or directory '/tmp/npm-1324514729774/1324514729765-0.9136077547445893/___package.npm'
+verbose mkdir done: /tmp/npm-1324514729774/1324514729765-0.9136077547445893/___package.npm 755
+verbose unpack_ uid, gid [ undefined, undefined ]
+verbose unpackTarget /tmp/npm-1324514729774/1324514729765-0.9136077547445893/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar undefined
+silly asyncMap in gTP /tmp/npm-1324514729774/1324514729765-0.9136077547445893/___package.npm/ubelt
+silly asyncMap in gTP /tmp/npm-1324514729774/1324514729765-0.9136077547445893/___package.npm/ubelt/objects.js
+silly asyncMap in gTP /tmp/npm-1324514729774/1324514729765-0.9136077547445893/___package.npm/ubelt/LICENCE
+silly asyncMap in gTP /tmp/npm-1324514729774/1324514729765-0.9136077547445893/___package.npm/ubelt/index.js
+silly asyncMap in gTP /tmp/npm-1324514729774/1324514729765-0.9136077547445893/___package.npm/ubelt/package.json
+silly asyncMap in gTP /tmp/npm-1324514729774/1324514729765-0.9136077547445893/___package.npm/ubelt/functions.js
+silly asyncMap in gTP /tmp/npm-1324514729774/1324514729765-0.9136077547445893/___package.npm/ubelt/types.js
+silly asyncMap in gTP /tmp/npm-1324514729774/1324514729765-0.9136077547445893/___package.npm/ubelt/random.js
+silly asyncMap in gTP /tmp/npm-1324514729774/1324514729765-0.9136077547445893/___package.npm/ubelt/readme.markdown
+silly asyncMap in gTP /tmp/npm-1324514729774/1324514729765-0.9136077547445893/___package.npm/ubelt/async.js
+silly asyncMap in gTP /tmp/npm-1324514729774/1324514729765-0.9136077547445893/___package.npm/ubelt/.gitignore
+silly asyncMap in gTP /tmp/npm-1324514729774/1324514729765-0.9136077547445893/___package.npm/ubelt/arrays.js
+verbose gunzed /tmp/npm-1324514729774/1324514729765-0.9136077547445893/___package.npm/ubelt
+verbose rm'ed /tmp/npm-1324514729774/1324514729765-0.9136077547445893/package
+verbose renamed [ '/tmp/npm-1324514729774/1324514729765-0.9136077547445893/___package.npm/ubelt',
+verbose renamed   '/tmp/npm-1324514729774/1324514729765-0.9136077547445893/package' ]
+verbose caching /tmp/npm-1324514729774/1324514729765-0.9136077547445893/package/package.json
+verbose loadDefaults ubelt@3.1.0
+verbose tarball contents [ 'package', 'tmp.tgz' ]
+verbose from cache /tmp/npm-1324514729774/1324514729765-0.9136077547445893/package/package.json
+verbose pack /tmp/npm-1324514729774/1324514729765-0.9136077547445893/package /home/dominic/.npm/ubelt/3.1.0/package.tgz
+silly makeList /tmp/npm-1324514729774/1324514729765-0.9136077547445893/package
+silly dir, dirLen [ '/tmp/npm-1324514729774/1324514729765-0.9136077547445893/package',
+silly dir, dirLen   64 ]
+verbose tarball /home/dominic/.npm/ubelt/3.1.0/package.tgz
+verbose parent /tmp/npm-1324514729774/1324514729765-0.9136077547445893/package
+verbose mkdir (expected) error ENOENT, no such file or directory '/home/dominic/.npm/ubelt/3.1.0/___package.npm'
+verbose mkdir done: /home/dominic/.npm/ubelt/3.1.0/___package.npm 755
+verbose unpack_ uid, gid [ undefined, undefined ]
+verbose unpackTarget /home/dominic/.npm/ubelt/3.1.0/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar undefined
+silly asyncMap in gTP /home/dominic/.npm/ubelt/3.1.0/___package.npm/package
+silly asyncMap in gTP /home/dominic/.npm/ubelt/3.1.0/___package.npm/package/objects.js
+silly asyncMap in gTP /home/dominic/.npm/ubelt/3.1.0/___package.npm/package/LICENCE
+silly asyncMap in gTP /home/dominic/.npm/ubelt/3.1.0/___package.npm/package/index.js
+silly asyncMap in gTP /home/dominic/.npm/ubelt/3.1.0/___package.npm/package/package.json
+silly asyncMap in gTP /home/dominic/.npm/ubelt/3.1.0/___package.npm/package/functions.js
+silly asyncMap in gTP /home/dominic/.npm/ubelt/3.1.0/___package.npm/package/types.js
+silly asyncMap in gTP /home/dominic/.npm/ubelt/3.1.0/___package.npm/package/random.js
+silly asyncMap in gTP /home/dominic/.npm/ubelt/3.1.0/___package.npm/package/readme.markdown
+silly asyncMap in gTP /home/dominic/.npm/ubelt/3.1.0/___package.npm/package/async.js
+silly asyncMap in gTP /home/dominic/.npm/ubelt/3.1.0/___package.npm/package/.gitignore
+silly asyncMap in gTP /home/dominic/.npm/ubelt/3.1.0/___package.npm/package/arrays.js
+verbose gunzed /home/dominic/.npm/ubelt/3.1.0/___package.npm/package
+verbose rm'ed /home/dominic/.npm/ubelt/3.1.0/package
+verbose renamed [ '/home/dominic/.npm/ubelt/3.1.0/___package.npm/package',
+verbose renamed   '/home/dominic/.npm/ubelt/3.1.0/package' ]
+verbose caching /home/dominic/.npm/ubelt/3.1.0/package/package.json
+verbose loadDefaults ubelt@3.1.0
+silly updated sha bytes 6526
+info shasum 22099f55d44c0f4fa3d7cf0697d373ccbfcb43d2
+info shasum /home/dominic/.npm/ubelt/3.1.0/package.tgz
+verbose from cache /home/dominic/.npm/ubelt/3.1.0/package/package.json
+verbose chmod /home/dominic/.npm/ubelt/3.1.0/package.tgz 644
+verbose chown [ '/home/dominic/.npm/ubelt/3.1.0/package.tgz', 1000, 1000 ]
+silly publish { name: 'ubelt',
+silly publish   version: '3.1.0',
+silly publish   description: 'utility belt was (Dominic\'s Utilities)',
+silly publish   homepage: 'http://github.com/dominictarr/d-utils',
+silly publish   main: './index.js',
+silly publish   repository: { type: 'git', url: 'git://github.com/dominictarr/d-utils.git' },
+silly publish   author: 
+silly publish    { name: 'Dominic Tarr',
+silly publish      email: 'dominic.tarr@gmail.com',
+silly publish      url: 'http://bit.ly/dominictarr' },
+silly publish   _npmUser: { name: 'dominictarr', email: 'dominic.tarr@gmail.com' },
+silly publish   _id: 'ubelt@3.1.0',
+silly publish   dependencies: {},
+silly publish   devDependencies: {},
+silly publish   engines: { node: '*' },
+silly publish   _engineSupported: true,
+silly publish   _npmVersion: '1.1.0-alpha-6',
+silly publish   _nodeVersion: 'v0.6.5',
+silly publish   _defaultsLoaded: true,
+silly publish   dist: 
+silly publish    { shasum: '22099f55d44c0f4fa3d7cf0697d373ccbfcb43d2',
+silly publish      tarball: 'http://registry.npmjs.org/ubelt/-/ubelt-3.1.0.tgz' } }
+verbose PUT ubelt
+verbose raw, before any munging ubelt
+verbose url resolving [ 'https://registry.npmjs.org/', './ubelt' ]
+verbose url resolved https://registry.npmjs.org/ubelt
+verbose GET ubelt
+verbose raw, before any munging ubelt
+verbose url resolving [ 'https://registry.npmjs.org/', './ubelt' ]
+verbose url resolved https://registry.npmjs.org/ubelt
+info Already published ubelt@3.1.0
+verbose uploading bin dists []
+ERR! publish fail Cannot publish over existing version.
+ERR! publish fail Bump the 'version' field, set the --force flag, or
+ERR! publish fail     npm unpublish 'ubelt@3.1.0'
+ERR! publish fail and try again
+ERR! 
+ERR! System Linux 2.6.35-30-generic-pae
+ERR! command "node" "/usr/local/bin/npm" "publish"
+ERR! cwd /home/dominic/source/dev/ubelt
+ERR! node -v v0.6.5
+ERR! npm -v 1.1.0-alpha-6
+ERR! code EPUBLISHCONFLICT
+ERR! message publish fail
+verbose exit [ 1, true ]

@@ -246,3 +246,10 @@ var setPath = exports.setPath = function (object, path, value) {
     object = object[key]
   }
 }
+
+var enqueue = exports.enqueue = function (queue, value) {
+
+  if(!~queue.indexOf(value))
+    return queue.push(value), true
+  return false
+}
