@@ -60,7 +60,8 @@ var times = exports.times = function () {
     i = 'number' === typeof i ? i : 1
     diff = j ? j - i : 1
     dir = i < m
-
+    if(m == i)
+      throw new Error('steps cannot be the same: '+m+', '+i)
   for (; dir ? i <= m : m <= i; i += diff)
     a.push(iterator(i))
   return a
@@ -154,7 +155,7 @@ diff = exports.diff = function (old, nw) {
   each(ab, function (ignore, k) {
 
     //if the property is not in the new object, it must have been deleted.
-    if (nw[k] == null)       
+    if (nw[k] == null) 
       s[k]  = null //null on a diff means to delete that property.
     else if ('object' === typeof nw[k] && 'object' === typeof old[k] && old[k]) 
       s[k] = diff(old[k], nw[k])
