@@ -1,9 +1,10 @@
 { "name": "ubelt"
-, "version": "3.2.1"
+, "version": "3.2.2"
 , "description": "utility belt was (Dominic's Utilities)"
 , "homepage": "http://github.com/dominictarr/ubelt"
 , "main": "./index.js"
 , "repository": 
   { "type": "git"
   , "url": "https://github.com/dominictarr/ubelt.git" }
+
 , "author": "Dominic Tarr <dominic.tarr@gmail.com> (http://bit.ly/dominictarr)" }
